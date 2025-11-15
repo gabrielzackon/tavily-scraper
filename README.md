@@ -58,7 +58,7 @@ High-level flow of the system:
 
 ```mermaid
 flowchart LR
-    U[Input URLs (failed_urls.csv)] --> C[Sampling & per-domain cap]
+    U[Input URLs] --> C[Sampling & per-domain cap]
 
     C --> H[HTTP Scraper (aiohttp)]
     H --> R[RobotsCache]
