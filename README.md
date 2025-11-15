@@ -60,24 +60,24 @@ High-level flow of the system:
 flowchart LR
     U[Input URLs] --> C[Sampling & per-domain cap]
 
-    C --> H[HTTP Scraper (aiohttp)]
+    C --> H[HTTP Scraper]
     H --> R[RobotsCache]
     R -->|disallowed| RB[robots_blocked_result]
     R -->|allowed| HF[HTTP FetchResult]
 
-    HF --> P[Policy: should_escalate()]
+    HF --> P[Policy: should escalate?]
     RB --> P
 
     P -->|no| HONLY[HTTP-only result]
-    P -->|yes| B[BrowserScraper (Playwright)]
+    P -->|yes| B[BrowserScraper]
 
     B --> BRES[Browser FetchResult]
 
     HONLY --> M[Hybrid aggregator]
     BRES --> M
 
-    M --> A[Analysis & Plots in scraper_final.ipynb]
-    A --> O[results/*.csv, cost model, histograms, scatter plots]
+    M --> A[Analysis & Plots]
+    A --> O[results, cost model, histograms, scatter plots]
 ```
 
 ---
