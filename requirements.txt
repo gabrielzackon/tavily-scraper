@@ -1,0 +1,12 @@
+aiohttp
+playwright
+pandas
+numpy
+pyarrow
+matplotlib
+tldextract
+charset-normalizer
+pydantic
+tqdm
+rich
+pyyaml

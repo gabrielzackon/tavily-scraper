@@ -1,0 +1,29 @@
+# scrape_config.yaml
+
+use_proxy: true
+user_agent: 'Mozilla/5.0 (TavilyCandidateBot)'
+
+# HTTP client tuning
+http_concurrency: 20
+http_total_timeout_s: 20.0
+http_connect_timeout_s: 10.0
+http_sock_read_timeout_s: 15.0
+http_max_retries: 1
+http_retry_base_delay_s: 0.1
+http_retry_jitter_s: 0.2
+
+# Browser tuning
+browser_timeout_ms: 20000
+browser_headless: true
+browser_block_heavy: true
+max_browser_escalations: 100
+browser_locale: 'en-US'
+
+# Robots cache
+robots_cache_path: 'data/robots_cache.json'
+robots_cache_ttl_s: 86400 # 24h
+
+# Escalation tuning
+escalation_min_bytes: 2048
+escalation_consider_latency: false
+escalation_latency_s: 5.0

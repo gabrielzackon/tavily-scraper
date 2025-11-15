@@ -1,0 +1,26 @@
+__pycache__/
+*.pyc
+.pytest_cache/
+.venv/
+.env
+
+# Data
+data/ProxyURL.txt
+data/ProxyURL.*
+!data/ProxyURL.example.txt
+
+data/failed_urls.csv
+data/failed_urls*.csv
+!data/failed_urls.example.csv
+
+data/robots_cache.json
+data/robots_cache*.json
+
+# Outputs
+artifacts/
+results/
+
+# Misc
+.ipynb_checkpoints/
+.DS_Store
+.vscode/

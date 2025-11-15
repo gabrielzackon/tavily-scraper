@@ -1,0 +1,5 @@
+# Example proxy configuration (do NOT put real credentials here)
+# Expected format: a single URL line:
+# https://username:password@host:port
+
+https://YOUR_USERNAME:YOUR_PASSWORD@proxy.example.com:12345
